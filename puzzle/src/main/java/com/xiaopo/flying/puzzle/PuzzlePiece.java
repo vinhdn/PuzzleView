@@ -79,7 +79,7 @@ public class PuzzlePiece {
   }
 
   private void draw(Canvas canvas, int alpha, boolean needClip, boolean quickMode) {
-    if ((drawable instanceof BitmapDrawable) && !quickMode) {
+    if (drawable != null && (drawable instanceof BitmapDrawable) && !quickMode) {
       int saved = canvas.saveLayer(null, null, Canvas.ALL_SAVE_FLAG);
 
       Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();

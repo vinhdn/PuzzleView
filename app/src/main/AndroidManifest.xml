@@ -36,6 +36,7 @@
     <activity android:name=".PlaygroundActivity">
 
     </activity>
+      <activity android:name=".CreateQuoterActivity"/>
   </application>
 
 </manifest>

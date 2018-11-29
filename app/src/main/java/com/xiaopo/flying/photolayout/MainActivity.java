@@ -23,14 +23,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.nowtoapps.collage.GetAllPhotoTask;
+import com.nowtoapps.collage.PhotoAdapter;
+import com.nowtoapps.collage.PhotoManager;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 import com.xiaopo.flying.photolayout.layout.straight.StraightLayoutHelper;
-import com.xiaopo.flying.poiphoto.GetAllPhotoTask;
-import com.xiaopo.flying.poiphoto.PhotoManager;
 import com.xiaopo.flying.poiphoto.datatype.Photo;
-import com.xiaopo.flying.poiphoto.ui.adapter.PhotoAdapter;
 import com.xiaopo.flying.puzzle.PuzzleLayout;
 import com.xiaopo.flying.puzzle.slant.SlantPuzzleLayout;
 import java.lang.ref.WeakReference;
@@ -151,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
     photoAdapter.setOnSelectedMaxListener(new PhotoAdapter.OnSelectedMaxListener() {
       @Override public void onSelectedMax() {
-        Toast.makeText(MainActivity.this, "装不下了～", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "Only support 10 image", Toast.LENGTH_SHORT).show();
       }
     });
 
@@ -250,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
       }
 
       @Override public void onBitmapFailed(Drawable errorDrawable) {
-
+        targets.remove(this);
       }
 
       @Override public void onPrepareLoad(Drawable placeHolderDrawable) {

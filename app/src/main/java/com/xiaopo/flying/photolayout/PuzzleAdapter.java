@@ -84,7 +84,7 @@ public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleView
 
     public PuzzleViewHolder(View itemView) {
       super(itemView);
-      puzzleView = (SquarePuzzleView) itemView.findViewById(R.id.puzzle);
+      puzzleView = itemView.findViewById(R.id.puzzle);
     }
   }
 

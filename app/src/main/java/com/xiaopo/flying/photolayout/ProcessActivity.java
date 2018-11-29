@@ -205,7 +205,7 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
     btnFlipVertical.setOnClickListener(this);
     btnBorder.setOnClickListener(this);
     btnCorner.setOnClickListener(this);
-
+    findViewById(R.id.btnAddImageTop).setOnClickListener(this);
     TextView btnSave = (TextView) findViewById(R.id.btn_save);
     btnSave.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(final View view) {
@@ -303,6 +303,14 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
         controlFlag = FLAG_CONTROL_CORNER;
         degreeSeekBar.setVisibility(View.VISIBLE);
         degreeSeekBar.setDegreeRange(0,100);
+        break;
+      case R.id.btnAddImageTop:
+          long rand = System.currentTimeMillis() % 2;
+          if (rand == 0) {
+              puzzleView.addCard(R.drawable.demo6);
+          } else {
+              puzzleView.addCard(R.drawable.demo4);
+          }
         break;
     }
   }

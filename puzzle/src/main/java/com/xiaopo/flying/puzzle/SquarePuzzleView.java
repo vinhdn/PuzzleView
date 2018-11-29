@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 /**
  * @author wupanjie
  */
-public class SquarePuzzleView extends PuzzleView {
+public class SquarePuzzleView extends PuzzlePreview {
   public SquarePuzzleView(Context context) {
     super(context);
   }

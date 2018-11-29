@@ -139,7 +139,7 @@ public class MatrixUtils {
         drawable.getIntrinsicHeight(), extraSize);
   }
 
-  private static Matrix generateCenterCropMatrix(Area area, int width, int height,
+  public static Matrix generateCenterCropMatrix(Area area, int width, int height,
       float extraSize) {
     final RectF rectF = area.getAreaRect();
 
