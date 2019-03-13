@@ -1027,8 +1027,8 @@ public class PuzzleView extends FrameLayout {
                     else he = wi;
                     FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(wi
                         , he);
-                    int left = random.nextInt(collageWidth) - collageWidth / 4;
-                    int top = random.nextInt(collageHeight) - collageHeight / 4;
+                    int left = collageWidth / 4;
+                    int top = collageHeight / 4;
                     params.leftMargin = left;
                     params.topMargin = top;
                     params.rightMargin = -left;
