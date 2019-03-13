@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 28
     }
 
     buildTypes {
@@ -18,30 +18,5 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:26.1.0'
-}
-
-ext {
-    // ./gradlew bintrayUpload
-    bintrayRepo = 'maven'
-    bintrayName = 'collage'
-
-    publishedGroupId = 'com.jcmore2.collage'
-    libraryName = 'collage'
-    artifact = 'collage'
-
-    libraryDescription = 'This library allows you to create a random collage of cards.'
-
-    siteUrl = 'https://github.com/jcmore2/Collage'
-    gitUrl = 'https://github.com/jcmore2/Collage.git'
-
-    libraryVersion = '1.0.0'
-
-    developerId = 'jcmore2'
-    developerName = 'Juan Carlos Moreno'
-    developerEmail = 'jcmore2@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
 }

@@ -4,8 +4,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.provider.MediaStore;
-import android.support.v4.util.ArrayMap;
-import android.util.Log;
 
 import com.xiaopo.flying.poiphoto.datatype.Album;
 import com.xiaopo.flying.poiphoto.datatype.Photo;

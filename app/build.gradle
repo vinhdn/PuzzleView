@@ -2,15 +2,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-  compileSdkVersion 26
-  buildToolsVersion "27.0.2"
+  compileSdkVersion 28
+  buildToolsVersion "28.0.3"
   defaultConfig {
     applicationId "com.xiaopo.flying.photolayout"
     minSdkVersion 14
-    targetSdkVersion 26
+    targetSdkVersion 28
     versionCode 1
     versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
     release {
@@ -21,15 +21,15 @@ android {
 }
 
 dependencies {
-  compile fileTree(include: ['*.jar'], dir: 'libs')
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+  implementation fileTree(include: ['*.jar'], dir: 'libs')
+  androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0-alpha02', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-  compile 'com.android.support:appcompat-v7:26.1.0'
-  compile 'com.flying.xiaopo:poiphoto:0.4.2'
-  testCompile 'junit:junit:4.12'
-  compile project(':puzzle')
-  compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
+  implementation 'com.flying.xiaopo:poiphoto:0.4.2'
+  testImplementation 'junit:junit:4.12'
+  implementation project(':puzzle')
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 repositories {
   mavenCentral()

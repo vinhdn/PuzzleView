@@ -1,1 +1,1 @@
-include ':app', ':puzzle', ':editer', ':photoediter', ':collage', ':collageSample'
+include ':app', ':puzzle', ':editer', ':collage'
